@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="Dx0DEdcxoUFjhZLmg1ET9KUuU6tidzpWI56gtiCN">
+
+    <title>নৈপুণ্য - রিসেট পিন</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+    
+    <link href="/css/adminltev3.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.maateen.me/solaiman-lipi/font.css');
+        @import url('https://fonts.maateen.me/kalpurush/font.css');
+        @import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+
+        * {
+            font-family: SolaimanLipi, sans-serif !important;
+        }
+        .fa,
+        .fas,
+        .fa-solid{
+            font-family: "Font Awesome 5 Free" !important;
+        }
+    </style>
+    </head>
+
+<body class="header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden login-page body-bg">
+    
+<div class="login-bg">
+    <div class="">
+        
+
+        <div class="container login-container">
+            <div class="logo">
+                <img src=/images/noipunno-new-logo.svg style="width: 120px; height: 120px;"
+                    alt="" />
+            </div>
+            
+            <div class="row">
+                <div class="col-md-7 col-sm-12 col-xl-8">
+                    <style>
+    .body-bg {
+        background: linear-gradient(180deg, #BEFDFF 0%, #51B9BD 100%);
+        background-image: url('/images/login-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 1% 3%;
+        font-family: 'Inter', sans-serif
+            /* min-height: 100vh; */
+    }
+
+    .login-form-card {
+        padding: 5% 8% 5% 8%;
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .login-container {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .teacher-login-title {
+        color: #181C32;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
+
+    .np-login-subtitle {
+        color: var(--text-secondary-color);
+    }
+
+    .np-login-checbox-text {
+        color: var(--text-secondary-color);
+    }
+
+    .login-button {
+        display: flex;
+        padding: 14px 112px 14px 111px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background: rgba(66, 143, 146, 1);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .login-button:hover {
+        background: #428F92;
+    }
+
+    .password-toggle {
+        position: absolute;
+        right: 3%;
+        top: 20%;
+        z-index: 100;
+    }
+
+    .np-login-field-icon {
+        position: absolute;
+        left: 4%;
+        z-index: 100;
+        top: 30%;
+        width: 20px;
+    }
+
+    .np-login-form-field {
+        border-radius: 5px !important;
+        background-color: #e3f3ff !important;
+        padding: 0.775rem 2.75rem;
+        border: none;
+    }
+
+    .np-otp-form-field {
+        border-radius: 5px !important;
+        background-color: #e3f3ff !important;
+        padding: 0.775rem 2.75rem;
+        border: none;
+        width: 60px !important;
+    }
+
+    .np-otp-form {
+        width: 70px;
+    }
+
+    .form-control::placeholder {
+        color: rgba(112, 111, 111, 0.849) !important;
+    }
+
+    .login-field-title {
+        color: #428F92;
+        margin: 10px 0;
+    }
+
+    .login-next-page {
+        color: white;
+        text-decoration: none;
+    }
+
+    .login-forget-pass {
+        float: right;
+        text-decoration: none;
+        color: black;
+    }
+
+    .login-language {
+        font-weight: 400;
+        color: #222;
+    }
+
+    /***********
+    Language Switch
+    ************/
+    .language-switch {
+        visibility: hidden;
+    }
+
+    .switch-label {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .switch-rail {
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        width: 45px;
+        height: 30px;
+        background: #DDDDDD;
+        border-radius: 50px;
+        overflow: hidden;
+        left: 65%;
+    }
+
+    .switch-slider {
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #428F92;
+    }
+
+    .language-switch:checked+.switch-label .switch-rail {
+        transition: all 0.2s ease-in-out;
+        background: #DDDDDD;
+    }
+
+    .language-switch:checked+.switch-label .switch-rail .switch-slider {
+        transition: all 0.2s ease-in-out;
+        transform: translateX(15px);
+    }
+
+    .switch-label-right {
+        padding-left: 55px;
+    }
+
+    .np-login-checkbox:checked {
+        background-color: rgba(66, 143, 146, 1);
+    }
+
+    .loginCard {
+        border-radius: 6px;
+        padding: 30px 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .max-width-540 {
+        max-width: 450px;
+        border: none;
+        min-height: 400px;
+    }
+
+    .max-width-490 {
+        max-width: 450px;
+        border: none;
+        min-height: 490px;
+    }
+
+    .login-card-padding {
+        padding: 25px !important;
+    }
+
+    #no_sms:hover {
+        color: rgba(66, 143, 146, 1) !important;
+        text-decoration: underline;
+    }
+
+    .login-container {
+        margin-top: 0px !important;
+    }
+
+    .transparent-card {
+        border: none;
+        background-color: #f6f6f883;
+        margin-right: 20px;
+        /* height: 400px; */
+    }
+
+    .card-body-custom {
+        padding: 10px;
+        color: black;
+        background-color: #ffffff56;
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-family: 'SolaimanLipi, sans-serif ';
+    }
+
+    .carousel-inner-custom {
+        height: 150px;
+    }
+
+    .card-footer-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .according-custom:hover {
+        background-color: #198754;
+        color: white !important;
+    }
+
+    .btn-custom {
+        border: none !important;
+    }
+
+    .btn-custom:hover {
+        background-color: #198754;
+        color: white !important;
+        border: none !important;
+    }
+
+    #caid::-webkit-input-placeholder,
+    #password::-webkit-input-placeholder {
+        color: #d6d4d4;
+    }
+
+    .noipunno-app {
+        width: 80%;
+    }
+
+    /** new style add  */
+    .btn.login-button {
+        --rotate: 180deg;
+        background: linear-gradient(var(--rotate), #92278f 0%, #662d91 100%);
+        border: 0px solid rgba(0, 0, 0, 0);
+        line-height: 15px;
+        transform: translatey(0px);
+        transition: all .75s cubic-bezier(0.72, 0.11, 0.22, 0.92);
+        position: relative;
+        z-index: 10;
+        --hover-radius: 60px;
+        overflow: hidden
+    }
+
+    .btn.login-button::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+        position: absolute;
+        inset: 0;
+        z-index: -10;
+        opacity: 1;
+        transition: all .75s cubic-bezier(0.72, 0.11, 0.22, 0.92);
+        clip-path: circle(0% at 0% 0%)
+    }
+
+    .btn.login-button:is(:hover) {
+        transform: translatey(-1px)
+    }
+
+    .btn.login-button:is(:hover)::after {
+        clip-path: circle(150% at 0 0)
+    }
+
+    /* mobile media query */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .order-mobile-first {
+            order: -1;
+        }
+
+        .help-desk-faq {
+            text-align: right;
+        }
+
+        .switch-rail {
+            left: 90%;
+        }
+
+        .login-language {
+            font-size: 11px;
+        }
+
+        .help-desk-content {
+            text-align: center;
+        }
+
+        .transparent-card {
+            border: none;
+            background-color: #f6f6f883;
+            margin-right: 20px;
+            height: 550px;
+            width: 100%;
+        }
+
+        .carousel-inner-custom {
+            height: 250px;
+        }
+
+        .app-download {
+            margin: left;
+            text-align: left;
+        }
+    }
+
+    @media screen and (min-width: 376px) and (max-width: 600px) {
+        .order-mobile-first {
+            order: -1;
+        }
+
+        .login-container {
+            margin-top: 20px !important;
+        }
+
+        .transparent-card {
+            border: none;
+            background-color: #f6f6f883;
+            margin-right: 20px;
+            height: 520px;
+            width: 100%;
+        }
+
+        .card-body-custom {
+            padding: 10px;
+            color: black;
+            background-color: #ffffff56;
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .carousel-inner-custom {
+            height: 200px;
+        }
+
+        .app-download {
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 375px) {
+        .order-mobile-first {
+            order: -1;
+        }
+
+        .transparent-card {
+            border: none;
+            background-color: #f6f6f883;
+            margin-right: 20px;
+            height: 620px;
+            width: 100%;
+        }
+
+        .card-body-custom {
+            padding: 10px;
+            color: black;
+            background-color: #ffffff56;
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            margin-bottom: 10px !important;
+            font-family: 'SolaimanLipi, sans-serif ';
+        }
+
+        .carousel-inner-custom {
+            height: 250px;
+        }
+
+        .app-download {
+            margin: auto;
+            text-align: center;
+        }
+    }
+</style>
+<div class="card transparent-card">
+    <div class="logo text-center">
+        <h4 class="fw-bold pt-5 pb-3" style="color: #B5248E"><b>নৈপুণ্য আপডেট</b></h4>
+    </div>
+
+    <div class="card-body-custom">
+                    <div id="carouselExampleIndicators" class="carousel slide mb-0" data-ride="carousel">
+                <ol class="carousel-indicators mb-0">
+                                            <li style="width: 15px; height: 15px; background-color: #92278f; border-radius: 50%; margin-bottom: 0px;"
+                            data-target="#carouselExampleIndicators" data-slide-to="0"
+                            class="active"></li>
+                                            <li style="width: 15px; height: 15px; background-color: #92278f; border-radius: 50%; margin-bottom: 0px;"
+                            data-target="#carouselExampleIndicators" data-slide-to="1"
+                            class=""></li>
+                                        
+                </ol>
+
+                <div class="carousel-inner carousel-inner-custom">
+
+                                            <div class="carousel-item active">
+                            <p class="mb-3" style="letter-spacing: 0.5px; text-align: justify;">
+                                :: মূল্যায়ন সংক্রান্ত বিজ্ঞপ্তি ::
+
+১। সাধারণ কর্মদিবস সমূহে সকাল ১০ টা থেকে বিকাল ৫ টা পর্যন্ত ওয়েবে (evaluation.noipunno.gov.bd) মূল্যায়ন কার্যক্রম বন্ধ থাকবে। 
+২। ষাণ্মাসিক সামষ্টিক মূল্যায়নের পূর্বের দিন বিকাল ৬ টা থেকে মূল্যায়নের দিন সকাল ১০ টা পর্যন্ত মোবাইল অ্যাাপ ও ওয়েবের মাধ্যমে মূল্যায়ন কার্যক্রম বন্ধ থাকবে।
+
+পরবর্তি নির্দেশনা না দেয়া পর্যন্ত উপরে উল্লেখিত সময় অনুসারে মূল্যায়ন কার্যক্রম পরিচালনা করার জন্য সকলকে অনুরোধ করা হচ্ছে। ধন্যবাদ।
+                            </p>
+                            <br />
+                        </div>
+                                            <div class="carousel-item ">
+                            <p class="mb-3" style="letter-spacing: 0.5px; text-align: justify;">
+                                ৬ জুলাই ২০২৪ সালের ৬ষ্ঠ-৯ম শ্রেণির ষান্মাসিক সামষ্টিক মূল্যায়নের নির্দেশনা আজ সন্ধ্যা ৭ ঘটিকায় উন্মুক্ত করা হবে। গত ৩ জুলাইয়ের মূল্যায়ণ নির্দেশনা ২ জুলাই দুপুর ২টায় দেয়া হয়েছিল। কিন্তু দূর্ভাগ্যের বিষয় প্রধান শিক্ষকদের আইডিতে প্রেরিত মূল্যায়নের নির্দেশনাগুলো সামাজিক যোগাযোগ মাধ্যমে শেয়ার করা হয়েছে এবং তার ভিত্তিতে কিছু বিভ্রান্তিকর সমাধান/উত্তর সামাজিক যোগাযোগ মাধ্যমে ছড়িয়ে দেয়া হয়েছিল। যা শিক্ষার্থী, শিক্ষক ও অভিভাবকদের বিভ্রান্ত করেছে। তাই এই বিভ্রান্তি রোধে এখন থেকে পূর্বদিন সন্ধ্যা ৭ ঘটিকায় ষান্মাসিক সামষ্টিক মূল্যায়নের নির্দেশনা প্রকাশ করা হবে। এছাড়াও সামাজিক যোগাযোগ মাধ্যমে কোনো কোনো প্রতিষ্ঠানের মূল্যায়ন কার্যক্রমের ছবিতে শিক্ষার্থীদের ডিভাইস ব্যবহার করতে দেখা গেছে, যা কাঙ্ক্ষিত নয়। সুতরাং পরবর্তী মূল্যায়ন কার্যক্রমে যেন ডিভাইস ব্যবহার না করা হয় সেটা সকল প্রতিষ্ঠান প্রধান নিশ্চিত করবেন। 
+নির্দেশনায়: জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (এনসিটিবি
+                            </p>
+                            <br />
+                        </div>
+                    
+                </div>
+            </div>
+            </div>
+
+    <div class="container noipunno-app mb-2">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="mt-2">অ্যাপ ডাউনলোড করতে ক্লিক করুন</p>
+            </div>
+            <div class="col-sm-4 mb-2 app-download"><a href="/app/noipunno.apk" download><img
+                        height="40px" data-toggle="tooltip" data-placement="top" title="ডাউনলোড করুন"
+                        src="/images/play-store-logo.png"></a></div>
+            <div class="col-sm-4 mb-2 app-download"><a
+                    href="https://play.google.com/store/apps/details?id=bd.gov.noipunno" target="_blank"><img
+                        height="40px" data-toggle="tooltip" data-placement="top" title="ডাউনলোড করুন"
+                        src="/images/play-store-logo2.png"></a></div>
+            <div class="col-sm-4 mb-2 app-download"><a href="https://apps.apple.com/sg/app/noipunno/id6503043370"
+                    target="_blank"><img height="40px" data-toggle="tooltip" data-placement="top" title="ডাউনলোড করুন"
+                        src="/images/ios-logo.png"></a></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-card-custom d-flex justify-content-center">
+    <div class="d-flex align-items-center">
+        <div>
+            <p class="text-center mt-3" style="font-size: 17px; color: #B7248E;"><b>হেল্প ডেস্ক:</b> &nbsp;</p>
+        </div>
+        <div class="d-flex justify-content-center" data-toggle="tooltip" data-placement="top" title="শিক্ষক সহায়িকা">
+            <a href="https://play.google.com/store/apps/details?id=com.a2i.teachersguide" target="_blank">
+                <img src=/images/sikkhok-sohayika.png class="" alt="Logo 1"
+                    style="cursor: pointer; border-radius: 100px; width: 60px; " />
+            </a>
+        </div>
+        <div class="d-flex justify-content-center" data-toggle="tooltip" data-placement="top" title="যোগাযোগ">
+            <img src=/images/support.svg style="cursor: pointer" data-toggle="modal"
+                data-target="#exampleModal1" class="card-footer-image" alt="Logo 1" />
+        </div>
+        <div class="d-flex justify-content-center" data-toggle="tooltip" data-placement="top"
+            title="আপনার সমস্যা লিখুন">
+            <a href="https://support.noipunno.gov.bd" target="_blank">
+                <img src=/images/about-us.svg class="" alt="Logo 1"
+                    style="cursor: pointer; border-radius: 100px; width: 55px; " />
+            </a>
+        </div>
+        <div class="d-flex justify-content-center" data-toggle="tooltip" data-placement="top" title="ব্যবহার সহায়িকা">
+            <img src=/images/list.svg style="cursor: pointer" data-toggle="modal"
+                data-target="#exampleModal2" class="card-footer-image" alt="Logo 2" />
+        </div>
+        <div class="d-flex justify-content-center" data-toggle="tooltip" data-placement="top" title="আপনার জিজ্ঞাসা">
+            <img src=/images/chat.svg style="cursor: pointer" data-toggle="modal"
+                data-target="#exampleModal3" class="card-footer-image" alt="Logo 3" />
+        </div>
+        <div>
+            <p class="text-center mt-3">
+                &nbsp; <a href="#" class=""
+                    style="font-size: 17px; text-decoration: underline; color: #B7248E;"><b>গোপনীয়তার নীতিমালা</b></a>
+            </p>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-xl-4 order-mobile-first">
+                    <div class="card loginCard max-width-540 login-card-padding">
+                        <p class="teacher-login-title text-center">রিসেট পিন</p>
+                        
+                        
+                                                <!-- Form Start -->
+                        <form action="https://accounts.noipunno.gov.bd/pin/phone-number" method="POST">
+                        
+                            <input type="hidden" name="_token" value="Dx0DEdcxoUFjhZLmg1ET9KUuU6tidzpWI56gtiCN" autocomplete="off">
+                            <div class="form-group d-none">
+                                <label for="user_type_id" class="login-field-title"> ইউজার টাইপ</label>
+                                <div class="input-group">
+                                    <select class="form-control np-login-form-field_" name="user_type_id" required>
+                                        
+                                        <!-- <option value="2">শিক্ষার্থী</option> -->
+                                        <option value="3" selected>প্রতিষ্ঠান</option>
+                                        <option value="4">অন্যান্য</option>
+                                    </select>
+                                </div>
+
+                                                            </div>
+
+                            <div class="form-group">
+                                <label for="pin" class="login-field-title"> ইউজার আইডি প্রদান করুন </label>
+                                <div class="input-group"><img src="/images/lock.svg" class="np-login-field-icon" alt="logo">
+                                    <input id="caid" type="text" class="form-control np-login-form-field " name="caid" required autocomplete="caid" autofocus placeholder="ইউজার আইডি" value="" data-toggle="tooltip" data-placement="top" title="প্রতিষ্ঠান এর পিন রিসেট করার জন্য EIIN/SGN প্রদান করুন">
+
+                                                                    </div>
+                            </div>
+
+                            <button type="submit" class="btn login-button text-white"> তথ্য যাচাই করুন</button>
+                            <p class="mt-3 text-center">
+                                <a href="https://accounts.noipunno.gov.bd/login" class="link-success" style="color: #428F92">
+                                    লগইন পেজ এ ফিরে যেতে ক্লিক করুন
+                                </a>
+                            </p>
+
+                        </form>
+                        <!-- Form End -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Modal contact -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content shadow-sm" style="border: none;">
+            <div class="modal-header text-light" style="background-color: #198754;">
+                <h5 class="modal-title" id="exampleModalLabel">যোগাযোগ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">সিরিয়াল</th>
+                            <th scope="col">জেলার নাম</th>
+                            <th scope="col">মোবাইল নাম্বার (স্কুল)</th>
+                            <th scope="col">মোবাইল নাম্বার (মাদ্রাসা)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">১</th>
+                            <td>বাগেরহাট</td>
+                            <td>০১৭১২৬৮৮১৬১৬</td>
+                            <td>০১৯১২৮১৯৪৩৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২</th>
+                            <td>বান্দরবান</td>
+                            <td>০১৭৩৯৩৪৫৮৭৮</td>
+                            <td>০১৮১৫৫৭২১৮২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩</th>
+                            <td>বরগুনা</td>
+                            <td>০১৭১৮১৬৫৯২০</td>
+                            <td>০১৭১৮১৬৫৯২০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪</th>
+                            <td>বরিশাল</td>
+                            <td>০১৭৫৭৫৮৫৯৯২</td>
+                            <td>০১৭২৫৫৪৭৯২১</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫</th>
+                            <td>ভোলা</td>
+                            <td>০১৭৩৪০৫৬৮৪৭</td>
+                            <td>০১৭২৭৫২৩৪১৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬</th>
+                            <td>বগুড়া</td>
+                            <td>০১৮৩৩৭৯৪১২৪</td>
+                            <td>০১৭২৩২৮১৫৩২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৭</th>
+                            <td>ব্রাহ্মণবাড়িয়া</td>
+                            <td>০১৬০১৯৩৬৫৬১</td>
+                            <td>০১৭৪৭৯৪২৯৪৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৮</th>
+                            <td>চাঁদপুর</td>
+                            <td>০১৯১৩৬৩৪৫৫০</td>
+                            <td>০১৮১৪৯৭৮৩৭০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৯</th>
+                            <td>চট্টগ্রাম</td>
+                            <td>০১৮১৮১২৭১৩৩</td>
+                            <td>০১৮১৮৪৩৩৪৮৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১০</th>
+                            <td>চুয়াডাঙ্গা</td>
+                            <td>০১৭১৬১০৪২০২</td>
+                            <td>০১৭১৯৯৬৯৯৬৮</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১১</th>
+                            <td>কক্সবাজার</td>
+                            <td>০১৯৭৩২৭৬৮৮৭</td>
+                            <td>০১৮২০১০২৪৩৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১২</th>
+                            <td>কুমিল্লা</td>
+                            <td>০১৬৪৭৩৭৩৭৫৭</td>
+                            <td>০১৮৫৪৬০১১২৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৩</th>
+                            <td>ঢাকা</td>
+                            <td>০১৭১৬১৫৮২৪৭</td>
+                            <td>০১৭১৫২৫৭৬২৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৪</th>
+                            <td>দিনাজপুর</td>
+                            <td>০১৭২৮৮৬৬৪৮৪</td>
+                            <td>০১৭১৭৭২২২৭৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৫</th>
+                            <td>ফরিদপুর</td>
+                            <td>০১৭২১০০১২৫৫</td>
+                            <td>০১৭১৬৬৬৮১৮০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৬</th>
+                            <td>ফেনী</td>
+                            <td>০১৭১৭৮৮১০৮৪</td>
+                            <td>০১৮৩০১২৩১৮৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৭</th>
+                            <td>গাইবান্ধা</td>
+                            <td>০১৭১৭০১৬১৪০</td>
+                            <td>০১৭১৪৫৪৬৪৮১</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৮</th>
+                            <td>গাজীপুর</td>
+                            <td>০১৭২১৯৯৬৬৩৭</td>
+                            <td>০১৭১৬০০৩১৫২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">১৯</th>
+                            <td>গোপালগঞ্জ</td>
+                            <td>০১৭১১২২২৯৩৪</td>
+                            <td>০১৮৮৯৩৬১৭৫০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২০</th>
+                            <td>হবিগঞ্জ</td>
+                            <td>০১৭১১৯১০০১৬</td>
+                            <td>০১৭১০৪৫৯৫৮৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২১</th>
+                            <td>জামালপুর</td>
+                            <td>০১৭১২৭২৫৪৬১</td>
+                            <td>০১৯১৪১২০৬৯১</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২২</th>
+                            <td>যশোর</td>
+                            <td>০১৯৩৬০১১১০২</td>
+                            <td>০১৯৩৬০১১১০২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৩</th>
+                            <td>ঝালকাঠি</td>
+                            <td>০১৭০৯৯০২৩৬৬</td>
+                            <td>০১৭১৮৭০০২৬২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৪</th>
+                            <td>ঝিনাইদহ</td>
+                            <td>০১৭১৬১০৭৫৭৭</td>
+                            <td>০১৫১৬৭১৭৮৩২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৫</th>
+                            <td>জয়পুরহাট</td>
+                            <td>০১৯১৬৩১৬১৬০</td>
+                            <td>০১৯১৭৬৭৭৮৪৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৬</th>
+                            <td>খাগড়াছড়ি</td>
+                            <td>০১৫৫৬৭৭১৫৫৫</td>
+                            <td>০১৬৯০গা৪৬৫৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৭</th>
+                            <td>খুলনা</td>
+                            <td>০১৭১৭০০৬৯১০</td>
+                            <td>০১৯১৫৪৫৫২৬২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৮</th>
+                            <td>কিশোরগঞ্জ</td>
+                            <td>০১৭৫১৬২৬৬৭৯</td>
+                            <td>০১৭১২০৭২৭৬২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">২৯</th>
+                            <td>কুড়িগ্রাম</td>
+                            <td>০১৭১৭১৭১৭৪১</td>
+                            <td>০১৭২১৫১৭৫১৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩০</th>
+                            <td>কুষ্টিয়া</td>
+                            <td>০১৭১৯৪৭৮৪২৬</td>
+                            <td>০১৭১৪৭৩০৭৯৭</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">৩১</th>
+                            <td>লক্ষ্মীপুর</td>
+                            <td>০১৭১৭২৯৬১২৮</td>
+                            <td>০১৭৮৮৫৭৭৬০৩</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩২</th>
+                            <td>লালমনিরহাট</td>
+                            <td>০১৭১৯০৬৮৯৬০</td>
+                            <td>০১৭২৫৪৪৯৯৯৮</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৩</th>
+                            <td>মাদারীপুর</td>
+                            <td>০১৭১২৭৮৩৯১০</td>
+                            <td>০১৯২৩৮৭৩৭৬৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৪</th>
+                            <td>মাগুরা</td>
+                            <td>০১৭২৮২৯৫৮৮৯</td>
+                            <td>০১৭১৬৮৮৭৭০৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৫</th>
+                            <td>মানিকগঞ্জ</td>
+                            <td>০১৭১৩৫২৪৩৭০</td>
+                            <td>০১৭২৮৩৭০৪১৭</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৬</th>
+                            <td>মেহেরপুর</td>
+                            <td>০১৯১৯১৩১৭০০</td>
+                            <td>০১৭৯২৪৪০৮৮১</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৭</th>
+                            <td>মৌলভীবাজার</td>
+                            <td>০১৭১১৪৭৬৮৯৫</td>
+                            <td>০১৭১২৩২১৩৪৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৮</th>
+                            <td>মুন্সিগঞ্জ</td>
+                            <td>০১৬৭৫৪৯০০০৫</td>
+                            <td>০১৯১১৯৩৯৯১</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৩৯</th>
+                            <td>ময়মনসিংহ</td>
+                            <td>০১৭২০৬৮২৫০০</td>
+                            <td>০১৭৭৪৯৭৬৯৭৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪০</th>
+                            <td>নওগাঁ</td>
+                            <td>০১৭২৮৪৬০০০১</td>
+                            <td>০১৭১৬১১৬০৬৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪১</th>
+                            <td>নড়াইল</td>
+                            <td>০১৭৩০১৯২৭৪২</td>
+                            <td>০১৭২৪৪৩২১৪৬</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪২</th>
+                            <td>নারায়ণগঞ্জ</td>
+                            <td>০১৬৭৮৭১৩৮০৮</td>
+                            <td>০১৭২৫৮৩৬৪৯৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৩</th>
+                            <td>নরসিংদী</td>
+                            <td>০১৭১০২৫৬১৮৪</td>
+                            <td>০১৭১০৮৩৭১১৭</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৪</th>
+                            <td>নাটোর</td>
+                            <td>০১৭৮৩০৭০৩০৮</td>
+                            <td>০১৮৫৩৫৭৫৭৩৫</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৫</th>
+                            <td>চাঁপাই নবাবগঞ্জ</td>
+                            <td>০১৭৩৭২৭২৩০৮</td>
+                            <td>০১৭১৫৮৪৪৩৮৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৬</th>
+                            <td>নেত্রকোনা</td>
+                            <td>০১৭১১১২৯৭০৯</td>
+                            <td>০১৭১৯৫২৩২৭৭</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৭</th>
+                            <td>নীলফামারী</td>
+                            <td>০১৭২২৬৭৮৫৫৩</td>
+                            <td>০১৭১৯৫৪৫৩২২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৮</th>
+                            <td>নোয়াখালী</td>
+                            <td>০১৮১৫৩২৫৩২৩</td>
+                            <td>০১৮৩৭৫২৭৯৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৪৯</th>
+                            <td>পাবনা</td>
+                            <td>০১৭১০৭৯৭৮৬৮</td>
+                            <td>০১৭১৭২৮৯৫৫০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫০</th>
+                            <td>পঞ্চগড়</td>
+                            <td>০১৭২৩২০৯৭২১</td>
+                            <td>০১৭১৯৩৪৭৩৯৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫১</th>
+                            <td>পটুয়াখালী</td>
+                            <td>০১৭১২৪১৪০৭৯</td>
+                            <td>০১৭৫৪৭৫৫১৬৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫২</th>
+                            <td>পিরোজপুর</td>
+                            <td>০১৭৪০৫৮৩২৯২</td>
+                            <td>০১৭৩০৯১৮১০৮</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৩</th>
+                            <td>রাজবাড়ী</td>
+                            <td>০১৭১১২৮৯৯০৮</td>
+                            <td>০১৭১৬৪২৬৮৫৩</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৪</th>
+                            <td>রাজশাহী</td>
+                            <td>০১৭১৮০৬২০২০</td>
+                            <td>০১৯১১৮৯৩৪৪৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৫</th>
+                            <td>রাঙ্গামাটি</td>
+                            <td>০১৮২৭১৮৫৩৯৫</td>
+                            <td>০১৭৩৪৩৪৬৫০৩</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৬</th>
+                            <td>রংপুর</td>
+                            <td>০১৭১৭৫৯০৯৬৭</td>
+                            <td>০১৭১৯২৪৫৮১৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৭</th>
+                            <td>সাতক্ষীরা</td>
+                            <td>০১৭৩৩১৬৩৮৯৫</td>
+                            <td>০১৭১৬৮২১৪৬৩</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৮</th>
+                            <td>শরীয়তপুর</td>
+                            <td>০১৯৮৯৯৫৭৩৬৪</td>
+                            <td>০১৭৫১৬২৬৬৭৯</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৫৯</th>
+                            <td>শেরপুর</td>
+                            <td>০১৭১২৮৯৬৯০৫</td>
+                            <td>০১৭৪০৫৭০৬৬০</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬০</th>
+                            <td>সিরাজগঞ্জ</td>
+                            <td>০১৭৩৭২৩০৯০৪</td>
+                            <td>০১৭৩৭২৩০৯০৪</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬১</th>
+                            <td>সুনামগঞ্জ</td>
+                            <td>০১৭৪০৯১৯২০২</td>
+                            <td>০১৭১৮৩৪৯০০৮</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬২</th>
+                            <td>সিলেট</td>
+                            <td>০১৭১২৯৬১৮৯২</td>
+                            <td>০১৭১১৩০০৪৫৮</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬৩</th>
+                            <td>টাঙ্গাইল</td>
+                            <td>০১৭৪৬২৩৯২৩৭</td>
+                            <td>০১৬৮৮৩১৪৭১২</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">৬৪</th>
+                            <td>ঠাকুরগাঁও</td>
+                            <td>০১৭১৪৫৬৯৬৫০</td>
+                            <td>০১৭১৪৫৬৯৬০০</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn text-light" style="background-color: #198754;"
+                    data-dismiss="modal">বন্ধ করুন</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal support -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content shadow-sm" style="border: none;">
+            <div class="modal-header text-light" style="background-color: #198754;">
+                <h5 class="modal-title" id="exampleModalLabel">ব্যবহার সহায়িকা</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>ব্যবহার সহায়িকা খুব শীঘ্রই আসিতেছে......</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn text-light" style="background-color: #198754;"
+                    data-dismiss="modal">বন্ধ করুন</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal faq -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content shadow-sm" style="border: none;">
+            <div class="modal-header text-light" style="background-color: #198754;">
+                <h5 class="modal-title" id="exampleModalLabel">আপনার জিজ্ঞাসা</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="accordion" id="accordionExample">
+
+                    <div class="card shadow-sm" style="border: none;">
+                        <div class="card-header according-custom" id="headingOne" style="border: none;"
+                            type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            ১। কিভাবে শিক্ষকের একাউন্ট আপডেট করবো ?
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                সফলভাবে লগইন করে 'প্রথম পাতা'য় যেতে হবে। তারপর 'আমার প্রোফাইল'-এ ক্লিক করে বর্তমান
+                                তথ্যগুলো দেখে নিতে হবে। তারপর 'প্রোফাইল হাল-নাগাদ' বাটনে ক্লিক করে প্রোফাইল হাল-নাগাদ
+                                পেজে যেতে হবে। প্রোফাইল হাল-নাগাদ পেজে গেলে আপনি আপনার যাবতীয় তথ্যদি দিয়ে আপনার আপনার
+                                প্রোফাইল সহজেই আপডেট করে নিতে পারবেন। বাংলায় নাম আপডেটের ক্ষেত্রে অবশ্যই বাংলা অক্ষরে
+                                আপনার পুর্ণ নাম লিখতে হবে। একইভাবে ইংরেজিতে নাম আপডেটের ক্ষেত্রে অবশ্যই ইংরেজি অক্ষরে
+                                আপনার পুর্ণ নাম লিখতে হবে।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header according-custom" id="headingTwo" type="button"
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            ২। পারদর্শিতার নির্দেশক (PI) কি ?
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                প্রতিটি শ্রেণির প্রতিটি বিষয়ের জন্য যে কয়টি একক যোগ্যতা আছে, সেগুলোকে প্রত্যেকটি আলাদা
+                                আলাদাভাবে বিশ্লেষণ করে এক বা একাধিক স্পষ্ট পর্যবেক্ষনযোগ্য যে নির্দেশক তৈরী করা হয়েছে
+                                সেগুলোই পারদর্শিতার নির্দেশক। কোন একটি পারদর্শিতার নির্দেশক এ শিক্ষার্থী বিভিন্ন
+                                মাত্রায় থাকতে পারে, তা পরিমাপের জন্য প্রতিটি পারদর্শিতার নির্দেশক এ শিক্ষার্থীর
+                                অবস্থানের তিনটি মাত্রা নির্ধারণ করা হয়েছে।<br />সমগ্র প্রক্রিয়াতে নিচের তিনটি ধাপ
+                                রয়েছেঃ<br />ধাপ ১ঃ মূল্যযাচাই পর্ব (শিখনকালীন ও সামষ্টিক) পরিচালনা ও উপাত্ত
+                                সংরক্ষণ,<br />ধাপ ২ঃ উপাত্ত বিশ্লেষণ ও ফলাফল গঠন,<br />ধাপ ৩ঃ ফলাফল প্রকাশ বা প্রেরণ।
+                                <br />শিক্ষকের কাজ হলো কোন একটি বিষয়ের শ্রেণিভিত্তিক যোগ্যতা অর্জনে শিক্ষার্থী কোন
+                                পর্যায়ে আছে তা নির্ধারণ করতে শিখনকালীন মূল্যায়ন এবং সামষ্টিক মূল্যায়ন থেকে তথ্য উপাত্ত
+                                নিয়ে পারদর্শিতার নির্দেশকসমূহে তার ইনপুট দেয়া।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header according-custom" id="headingThree"
+                            class="btn btn-block text-left btn-custom" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ৩। আচরণিক নির্দেশক (BI) কি ?
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                আচরণিক নির্দেশক মূল্যায়নে আচরণ থেকে প্রত্যেক শিক্ষার্থীকে ০৯ টি বিষয়ের উপরে মূল্যায়ন করা
+                                হবে। এক্ষেত্রেও শিক্ষার্থীর অবস্থানের তিনটি মাত্রা নির্ধারণ করা হয়েছে। সমগ্র প্রক্রিয়াতে
+                                নিচের তিনটি ধাপ রয়েছেঃ<br />ধাপ ১ঃ মূল্যযাচাই পর্ব (শিখনকালীন ও সামষ্টিক) পরিচালনা ও
+                                উপাত্ত সংরক্ষণ;<br /> ধাপ ২ঃ উপাত্ত বিশ্লেষণ ও ফলাফল গঠন;<br />ধাপ ৩ঃ ফলাফল প্রকাশ বা
+                                প্রেরণ।<br />শিক্ষকের কাজ হলো কোন একটি বিষয়ের শ্রেণিভিত্তিক যোগ্যতা অর্জনে শিক্ষার্থী
+                                কোন পর্যায়ে আছে তা নির্ধারণ করতে শিখনকালীন মূল্যায়ন এবং সামষ্টিক মূল্যায়ন থেকে তথ্য
+                                উপাত্ত নিয়ে পারদর্শিতার নির্দেশকসমূহে তার ইনপুট দেয়া।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header according-custom" id="headingFour"
+                            class="btn btn-block text-left btn-custom" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            ৪। কিভাবে মূল্যায়ন করবো ?
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                সফলভাবে লগ-ইন করে 'প্রথম পাতা'য় যেতে হবে। তারপর বিষয় ভিত্তিক তথ্য ও মূল্যায়ন থেকে আপনার
+                                পছন্দকৃত বিষয় ক্লিক করুন এরপর পারদর্শিতা মূল্যায়ন অথবা আচরণগত মূল্যায়ন থেকে আপনার
+                                প্রয়োজনীয় যে কোনো একটি নির্বাচন করুন। তারপর শিখনকালীন মূল্যায়ন নির্বাচন করে যে কোনো
+                                একটি অধ্যায় থেকে একটি এট্রিবিউট নির্বাচন করুন। এরপর আপনার ইচ্ছাকৃত যে কোনো একটি
+                                শিক্ষার্থীর ওয়েট নির্বাচন করে মূল্যায়ন সংরক্ষণ বাটন এ চেপে মূল্যায়ন সম্পূর্ণ করুন।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header according-custom" id="headingFive"
+                            class="btn btn-block text-left btn-custom" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            ৫। কিভাবে খসড়া করবো ?
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                সফলভাবে লগ-ইন করে 'প্রথম পাতা'য় যেতে হবে। তারপর বিষয় ভিত্তিক তথ্য ও মূল্যায়ন থেকে আপনার
+                                পছন্দকৃত বিষয় ক্লিক করুন এরপর পারদর্শিতা মূল্যায়ন অথবা আচরণগত মূল্যায়ন থেকে আপনার
+                                প্রয়োজনীয় যে কোনো একটি নির্বাচন করুন। তারপর শিখনকালীন মূল্যায়ন নির্বাচন করে যে কোনো
+                                একটি অধ্যায় থেকে একটি এট্রিবিউট নির্বাচন করুন। এরপর আপনার ইচ্ছাকৃত যে কোনো একটি
+                                শিক্ষার্থীর মূল্যায়ন করুন এবং নিম্নে খসড়া বাটন চাপুন।
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header according-custom" id="headingSix"
+                            class="btn btn-block text-left btn-custom" type="button" data-toggle="collapse"
+                            data-target="#collapsSix" aria-expanded="false" aria-controls="collapseThree">
+                            ৬। কিভাবে PI মুল্যায়ন সংরক্ষণ করবো ?
+                        </div>
+                        <div id="collapsSix" class="collapse" aria-labelledby="headingSix"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                সফলভাবে লগ-ইন করে 'প্রথম পাতা'য় যেতে হবে। তারপর বিষয় ভিত্তিক তথ্য ও মূল্যায়ন থেকে আপনার
+                                পছন্দকৃত বিষয় ক্লিক করুন,এরপর পারদর্শিতা মূল্যায়ন নির্বাচন করুন। তারপর শিখনকালীন
+                                মূল্যায়ন নির্বাচন করে যে কোনো একটি অধ্যায় থেকে একটি এট্রিবিউট নির্বাচন করুন। এরপর আপনার
+                                ইচ্ছাকৃত যে কোনো একটি শিক্ষার্থীর ওয়েট নির্বাচন করে মূল্যায়ন সংরক্ষণ বাটন এ চেপে
+                                মূল্যায়ন সম্পূর্ণ করুন।
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn text-light" style="background-color: #198754;"
+                    data-dismiss="modal">বন্ধ করুন</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+        
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+
+</html
